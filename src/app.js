@@ -41,7 +41,8 @@ app.get('/weather', (req, res) => {
                 }
 
                 res.send({
-                    forecast: forecastData.summary + '. It is currently ' + forecastData.temperature + ' degrees out. There is a ' + forecastData.rainProbability + '% chance of rain',
+                    forecast: ' ' + forecastData.summary + '. It is currently ' + forecastData.temperature + ' degrees out. There is a ' + forecastData.rainProbability + '% chance of rain. ' + 
+                    'Wind Speed is at ' + forecastData.windSpeed + ' m/s. Temperature range for the day would be in between ' + forecastData.dailyTempHigh + ' degrees and ' +  forecastData.dailyTempLow + ' degrees',
                     location,
                     address:req.query.address
                 })
